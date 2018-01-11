@@ -31,6 +31,10 @@ describe Journey do
      journey.end(exit_station)
      expect(journey.exit_station).to eq exit_station
      end
+
+     it "should return self when journey ends" do
+     expect( journey.end(exit_station)).to eq journey
+     end
    end
 
 
