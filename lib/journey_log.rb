@@ -1,7 +1,7 @@
 require_relative "journey"
 
 class JourneyLog
- attr_reader :history, :current_journey
+ attr_reader :current_journey
 
  def initialize(journey)
    @history = []
@@ -14,6 +14,10 @@ class JourneyLog
 
  def end(exit_station)
    @history << @current_journey
+ end
+
+ def history
+   @history.dup
  end
 
 end
