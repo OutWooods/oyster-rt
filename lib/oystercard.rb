@@ -1,4 +1,4 @@
-require_relative 'journey'
+require_relative 'journey_log'
 
 class Oystercard
 attr_reader :balance, :journeys
@@ -6,9 +6,9 @@ attr_reader :balance, :journeys
 BALANCE_LIMIT = 90
 MINIMUM_FARE = 1
 
-  def initialize(journey_log = JourneyLog, balance = 0)
+  def initialize(journey_log = JourneyLog.new, balance = 0)
    @balance = balance
-   @journeys = journey_log.new
+   @journeys = journey_log
   end
 
   def top_up(amount)
@@ -18,8 +18,7 @@ MINIMUM_FARE = 1
 
   def touch_in(station)
     fail "Insufficient balance" unless enough_money?
-    close_journey if @current_journey   #extract
-    @current_journey = create_journey(station)
+    @journeys.start(station)
   end
 
   def touch_out(exit_station)
@@ -33,10 +32,10 @@ MINIMUM_FARE = 1
   end
 
   def close_journey(exit_station=nil)  #extract
-    current_journey.end(exit_station)
+    current_journey.end(exit_station) #
     deduct(@current_journey.fare)
-    store_journey(@current_journey)
-    clear_journey
+    store_journey(@current_journey) #
+    clear_journey #
   end
 
   def clear_journey  # extract
@@ -54,7 +53,6 @@ MINIMUM_FARE = 1
   def penalty? #extract
     !!@current_journey
   end
-
 
 
   def deduct(amount)
