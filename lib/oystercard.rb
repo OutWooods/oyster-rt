@@ -18,41 +18,20 @@ MINIMUM_FARE = 1
 
   def touch_in(station)
     fail "Insufficient balance" unless enough_money?
+    deduct(journeys.fare) if @journeys.started?
     @journeys.start(station)
   end
 
   def touch_out(exit_station)
-    close_journey(exit_station)  #extract
+    deduct(@journeys.fare)
+    @journeys.end(exit_station) #test oystercard calls end on journey
   end
 
   private
 
-  def create_journey(station=nil)
-    @journey.new(station)   #extract
-  end
-
-  def close_journey(exit_station=nil)  #extract
-    current_journey.end(exit_station) #
-    deduct(@current_journey.fare)
-    store_journey(@current_journey) #
-    clear_journey #
-  end
-
-  def clear_journey  # extract
-    @current_journey = nil
-  end
-
-  def current_journey #extract
-    @current_journey ||= create_journey
-  end
-
-  def store_journey(journey) #extract
-    @journeys << journey
-  end
-
-  def penalty? #extract
-    !!@current_journey
-  end
+  # def penalty? #extract
+  #   !!@current_journey
+  # end
 
 
   def deduct(amount)
