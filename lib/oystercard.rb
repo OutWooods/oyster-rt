@@ -24,16 +24,10 @@ MINIMUM_FARE = 1
 
   def touch_out(exit_station)
     @journeys.end(exit_station)
-    deduct(@journeys.fare)
-  
+    deduct(@journeys.fare)  #extract
   end
 
   private
-
-  # def penalty? #extract
-  #   !!@current_journey
-  # end
-
 
   def deduct(amount)
     @balance -= amount

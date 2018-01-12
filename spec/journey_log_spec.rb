@@ -18,9 +18,20 @@ describe JourneyLog do
      it 'should start a new journey' do
         expect(journey_log.start(entry_station)).to eq journey
      end
+
+     it "if you start twice, it stores an incomplete journey" do
+       journey_log.start(entry_station)
+       journey_log.start(entry_station)
+       expect(journey_log.history).to include journey
+     end
    end
 
    describe "#end" do
+    it "stores an unfinished journey" do
+      allow(journey).to receive(:end)
+      expect(journey_log.history).to include journey
+    end
+
      before do
        allow(journey).to receive(:end)
        journey_log.start(entry_station)
