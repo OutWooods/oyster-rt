@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/lewismoore/Desktop/Projects/MakersAcademy/Projects/Week_2/oyster-rt/spec/journey_log_spec.rb": [
+      "/Users/tomgrand/Makers/week_2/oyster-rt/spec/journey_log_spec.rb": [
         1,
         null,
         1,
@@ -72,7 +72,7 @@
         null,
         null
       ],
-      "/Users/lewismoore/Desktop/Projects/MakersAcademy/Projects/Week_2/oyster-rt/lib/journey_log.rb": [
+      "/Users/tomgrand/Makers/week_2/oyster-rt/lib/journey_log.rb": [
         1,
         null,
         1,
@@ -125,7 +125,7 @@
         null,
         null
       ],
-      "/Users/lewismoore/Desktop/Projects/MakersAcademy/Projects/Week_2/oyster-rt/lib/journey.rb": [
+      "/Users/tomgrand/Makers/week_2/oyster-rt/lib/journey.rb": [
         1,
         null,
         1,
@@ -162,7 +162,7 @@
         null,
         null
       ],
-      "/Users/lewismoore/Desktop/Projects/MakersAcademy/Projects/Week_2/oyster-rt/lib/station.rb": [
+      "/Users/tomgrand/Makers/week_2/oyster-rt/lib/station.rb": [
         1,
         null,
         1,
@@ -173,7 +173,7 @@
         null,
         null
       ],
-      "/Users/lewismoore/Desktop/Projects/MakersAcademy/Projects/Week_2/oyster-rt/spec/journey_spec.rb": [
+      "/Users/tomgrand/Makers/week_2/oyster-rt/spec/journey_spec.rb": [
         1,
         null,
         1,
@@ -240,7 +240,7 @@
         null,
         null
       ],
-      "/Users/lewismoore/Desktop/Projects/MakersAcademy/Projects/Week_2/oyster-rt/spec/oystercard_spec.rb": [
+      "/Users/tomgrand/Makers/week_2/oyster-rt/spec/oystercard_spec.rb": [
         1,
         null,
         1,
@@ -307,7 +307,7 @@
         null,
         null
       ],
-      "/Users/lewismoore/Desktop/Projects/MakersAcademy/Projects/Week_2/oyster-rt/lib/oystercard.rb": [
+      "/Users/tomgrand/Makers/week_2/oyster-rt/lib/oystercard.rb": [
         1,
         null,
         1,
@@ -354,7 +354,7 @@
         null,
         null
       ],
-      "/Users/lewismoore/Desktop/Projects/MakersAcademy/Projects/Week_2/oyster-rt/spec/station_spec.rb": [
+      "/Users/tomgrand/Makers/week_2/oyster-rt/spec/station_spec.rb": [
         1,
         null,
         1,
@@ -370,6 +370,6 @@
         null
       ]
     },
-    "timestamp": 1515772795
+    "timestamp": 1515773331
   }
 }
