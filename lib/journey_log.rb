@@ -13,6 +13,7 @@ class JourneyLog
  end
 
  def end(exit_station)
+   @current_journey.end(exit_station)
    store_journey
    clear_journey
  end
@@ -26,6 +27,7 @@ class JourneyLog
  end
 
  def fare
+   return @history[-1] if @current_journey.nil? 
    @current_journey.fare
  end
 

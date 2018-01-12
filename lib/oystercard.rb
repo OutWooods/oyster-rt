@@ -23,8 +23,9 @@ MINIMUM_FARE = 1
   end
 
   def touch_out(exit_station)
+    @journeys.end(exit_station)
     deduct(@journeys.fare)
-    @journeys.end(exit_station) #test oystercard calls end on journey
+  
   end
 
   private

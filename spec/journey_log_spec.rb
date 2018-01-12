@@ -22,6 +22,7 @@ describe JourneyLog do
 
    describe "#end" do
      before do
+       allow(journey).to receive(:end)
        journey_log.start(entry_station)
        journey_log.end(exit_station)
      end
